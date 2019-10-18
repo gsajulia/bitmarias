@@ -10,7 +10,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1a1a1a;
+    background-color: #0A0A0A;
 }
 
 li {
@@ -35,13 +35,13 @@ li a svg g path.color-one {
     fill-opacity:1;
 }
 li a:hover.color-two {
-    background-color: rgb(165, 45, 194);
+    background-color: rgba(165, 45, 194, 0.80);
 }
 li a:hover.color-three {
     background-color: #2025c2;
 }
 li {
-    border-left: 4px solid #1a1a1a;
+    border-left: 4px solid #0a0a0a;
 }
 
 li:last-child {
@@ -50,3 +50,161 @@ li:last-child {
 li a:hover svg g path {
     fill:#ffffff;
 }
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*-- banner --*/
+.banner{
+    background: url(../images/spacy_img.png) no-repeat 0px 0px;
+    background-size: cover;
+}
+.banner-dot {
+    background: url(../images/dott.png)repeat 0px 0px;
+    background-size: 2px;
+    -webkit-background-size: 2px;
+    -moz-background-size: 2px;
+    -o-background-size: 2px;
+    -ms-background-size: 2px;
+    padding: 1em 0 0 0;
+}
+/*-- //banner --*/
+.navbar-default .navbar-nav li  a:hover:before,.navbar-default .navbar-nav li a.active:before{
+    width: 100%;
+}
+/*-- banner-info --*/
+.banner-info {
+    padding: 9em 0;
+}
+.text-display{
+    text-align:center;
+}
+.text-display h3{
+    font-weight: lighter;
+    color:#FFFFFF;
+    font-size:1.5em;
+    margin:0;
+}
+.text-display h2{
+    font-weight: lighter;
+    color: #ffffff;
+    font-size: 4em;
+    margin: .5em 0 1em;
+    font-family: 'Poppins', sans-serif;
+}
+/*-- //banner-info --*/
+
+/*--paragraph--*/
+#about {
+    padding: 50px;
+}
+
+#about img {
+    float: right;
+    padding: 0 50px;
+}
+
+#align-the-paragraph {
+    padding: 100px 50px;
+}
+
+#align-the-paragraph h3 {
+    font-size: 2em;
+    color: #c5c5c5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+#align-the-paragraph p {
+    margin: 2em 0 0;
+    line-height: 2em;
+    color: #9b9b9b;
+    font-size: 1em;
+}
+/*--//paragraph--*/
+.w3-agileits-testimonial{
+    background: url(../images/dott.png)repeat 0px 0px;
+    background-size: 2px;
+    -webkit-background-size: 2px;
+    -moz-background-size: 2px;
+    -o-background-size: 2px;
+    -ms-background-size: 2px;
+}
+.wthree-subscribe h3,.contact h3{
+    font-size: 3em;
+    color: #A52DC2;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.wthree-subscribe h3,.contact h3{
+    text-align:center;
+}
+.welcome,.w3-agileits-testimonial,.contact{
+    padding:5em 0;
+}
+/*-- subscribe --*/
+.subscribe-bg {
+    padding: 2em 0!important;
+}
+.wthree-subscribe {
+    background: url(../images/img1.jpg) no-repeat 0px 0px;
+    background-size:cover;
+}
+.wthree-subscribe h3{
+    text-align: left;
+    padding-left: 150px;
+    font-size: 2em;
+    color: #c5c5c5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.w3-agileits-subscribe-form {
+    text-align: left;
+    margin: 2em 0 0 0;
+    padding-left: 150px;
+}
+.w3-agileits-subscribe-form input[type="text"] {
+    display: inline-block;
+    background: #FFFFFF;
+    border: solid 2px #FFFFFF;
+    width: 45%;
+    outline: none;
+    padding: 1em;
+    font-size: .875em;
+    color: #999999;
+}
+.w3-agileits-subscribe-form textarea {
+    display: inline-block;
+    background: #FFFFFF;
+    border: solid 2px #FFFFFF;
+    width: 45%;
+    outline: none;
+    padding: 1em;
+    font-size: .875em;
+    color: #999999;
+}
+
+ label {
+    font-size: 1em;
+    color: #b6b6b6;
+    text-align: left;
+}
+
+button.btn1 {
+    color: #FFFFFF;
+    font-size: .875em;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    background: #A52DC2;
+    border: solid 2px #999999;
+}
+button.btn1:hover{
+    background:none;
+    border: solid 2px #FFFFFF;
+}
+
+
+/*-- //subscribe --*/
