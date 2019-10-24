@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>BitMarias</title>
+    <link href="../assets/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- banner -->
+<div class="banner">
+    <div class="banner-dot">
+        <% include partials/nav.ejs %>
+        <!-- banner-info -->
+        <div class="banner-info">
+            <div class="container">
+                <div class="text-display">
+                    <h2>Seja bem-vinda/o!</h2>
+                    <h3>BitMarias</h3>
+                </div>
+            </div>
+        </div>
+        <!-- //banner-info -->
+    </div>
+</div>
+<!-- //banner -->
+<!-- about -->
+<div id="about">
+    <img src="images/bitmariassm.jpg" alt=" " />
+    <div id="align-the-paragraph">
+        <h3>Sobre nós</h3>
+        <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+            nesciunt. <i>Quis autem vel eum iure
+                reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+                pariatur?</i>
+        </p>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+<!-- //about -->
+<!-- subscribe -->
+<div class="wthree-subscribe" id="contact">
+    <div class="w3-agileits-testimonial subscribe-bg">
+        <div class="container">
+            <h3>Entre em contato conosco</h3>
+            <form  method="POST" action="/">
+                <div class="w3-agileits-subscribe-form">
+                    <label for="msg">Informe seu email:</label><br/><br/>
+                    <label>
+                        <input class="col-md-12" type="text" placeholder="email" name="email" required="" value="<%= qs.person%>">
+                    </label><br/><br/>
+                    <label for="msg">Você pode nos mandar dúvidas ou sugestões abaixo:</label><br/><br/>
+                    <textarea id="msg" cols="5" rows="5" name="msg" value="<%= qs.msg%>"></textarea><br/><br/>
+                    <button class="btn1">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr style="height:70px; border:none; background-color:#0a0a0a; margin-top: 0; margin-bottom: 0;" />
+<!-- //subscribe -->
+</body>
+</html>
