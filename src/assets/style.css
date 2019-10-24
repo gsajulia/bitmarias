@@ -58,11 +58,11 @@ li a:hover svg g path {
 }
 /*-- banner --*/
 .banner{
-    background: url(../images/spacy_img.png) no-repeat 0px 0px;
+    background: url(../images/spacy_img.png) no-repeat 0 0;
     background-size: cover;
 }
 .banner-dot {
-    background: url(../images/dott.png)repeat 0px 0px;
+    background: url(../images/dott.png)repeat 0 0;
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
@@ -125,7 +125,7 @@ li a:hover svg g path {
 }
 /*--//paragraph--*/
 .w3-agileits-testimonial{
-    background: url(../images/dott.png)repeat 0px 0px;
+    background: url(../images/dott.png)repeat 0 0;
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
@@ -149,7 +149,7 @@ li a:hover svg g path {
     padding: 2em 0!important;
 }
 .wthree-subscribe {
-    background: url(../images/img1.jpg) no-repeat 0px 0px;
+    background: url(../images/img1.jpg) no-repeat 0 0;
     background-size:cover;
 }
 .wthree-subscribe h3{
