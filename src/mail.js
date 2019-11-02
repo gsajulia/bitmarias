@@ -12,8 +12,8 @@ const sendMail = (email, msg, receiver, cb) => {
     let mailOptions = {
         from: '"BitMarias" <bitmarias@inf.ufsm.br>', // sender address
         to: receiver ? receiver : email, // list of receivers
-        subject: 'Sua sugestão / dúvida foi recebida! Em breve responderemos!', // Subject line
-        html: receiver ? msg + '<br/><br/>' + ' -> Email da pessoa que entrou em contato: ' + email : 'Sua sugestão / dúvida: <br/><br/>' + msg// html body
+        subject: receiver ? 'Alguém entrou em contato pelo site!' : 'Sua sugestão / dúvida foi recebida! Em breve responderemos!', // Subject line
+        html: receiver ? msg + '<br/><br/>' + ' -> Email da pessoa que entrou em contato: ' + email : 'Sua sugestão / dúvida: <br/><br/>' + msg + '<br/><br/>Não responda este email, caso queira nos contatar diretamente mande para: bitmarias@inf.ufsm.br'// html body
     };
 
     transporter.sendMail(mailOptions, (error, info) =>{

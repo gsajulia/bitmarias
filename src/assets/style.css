@@ -1,11 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=UnifrakturCook:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 html, body{
-    font-size: 1.05em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    background: #474147;
+    font-size: 1.2em;
+    /*font-family: 'IM Fell English SC', serif;*/
+    /*font-family: 'UnifrakturCook', cursive;*/
+    /*font-family: 'Press Start 2P', cursive;*/
+    font-family: 'Iceland', cursive;
+    /*font-family: 'Ubuntu', sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    background: #ececec;
     margin: 0;
 }
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*-- //font --*/
+/*-- Modal Content bot maria --*/
+.invisivel:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255, 232, 10, 0.64);
+    bottom: -10px;
+    left: 40%;
+}
+.invisivel {
+    border-radius: 15px;
+    margin-bottom: 1em;
+    z-index: 199;
+    top: 350px;
+    position: fixed;
+    background-color: rgba(255, 232, 10, 0.64);
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+.fixo {
+    z-index: 199;
+    position: fixed;
+    top: 400px;
+}
+.myBtn {
+    position: static;
+    color: #FFFFFF;
+    font-size: .875em;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    background: #A52DC2;
+    border: solid 2px #999999;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+/*-- //Modal Content bot maria --*/
+/*-- close button --*/
+.close {
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*-- //close button --*/
+/*-- header --*/
 ul {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 0.7em;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -40,6 +136,10 @@ li a:hover.color-two {
 li a:hover.color-three {
     background-color: #2025c2;
 }
+li a:hover.color-four {
+    background-color: #C20213;
+}
+
 li {
     border-left: 4px solid #0a0a0a;
 }
@@ -50,26 +150,13 @@ li:last-child {
 li a:hover svg g path {
     fill:#ffffff;
 }
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*-- //header --*/
 /*-- banner --*/
 .banner{
-    background: url(../images/spacy_img.png) no-repeat 0 0;
+    background: url(../images/womans.jpg) no-repeat 0 0;
     background-size: cover;
 }
-.banner-dot {
-    background: url(../images/dott.png)repeat 0 0;
-    background-size: 2px;
-    -webkit-background-size: 2px;
-    -moz-background-size: 2px;
-    -o-background-size: 2px;
-    -ms-background-size: 2px;
-    padding: 1em 0 0 0;
-}
+
 /*-- //banner --*/
 .navbar-default .navbar-nav li  a:hover:before,.navbar-default .navbar-nav li a.active:before{
     width: 100%;
@@ -78,94 +165,90 @@ li a:hover svg g path {
 .banner-info {
     padding: 9em 0;
 }
-.text-display{
-    text-align:center;
-}
-.text-display h3{
-    font-weight: lighter;
-    color:#FFFFFF;
-    font-size:1.5em;
-    margin:0;
-}
+
 .text-display h2{
+    position:relative;
     font-weight: lighter;
     color: #ffffff;
-    font-size: 4em;
-    margin: .5em 0 1em;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    font-family: 'Franklin Gothic Demi', cursive;
 }
 /*-- //banner-info --*/
 
-/*--paragraph--*/
+/*-- paragraph --*/
 #about {
-    padding: 50px;
+    padding: 50px 100px;
 }
 
 #about img {
+    position:relative;
     float: right;
-    padding: 0 50px;
 }
 
 #align-the-paragraph {
-    padding: 100px 50px;
+    padding: 0 25px;
 }
 
 #align-the-paragraph h3 {
-    font-size: 2em;
-    color: #c5c5c5;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    color: #0a0a0a;
+    font-family: 'Franklin Gothic Demi', cursive;
     margin: 0;
 }
 
 #align-the-paragraph p {
+    background-color: #0b1f3a;
     margin: 2em 0 0;
     line-height: 2em;
     color: #9b9b9b;
-    font-size: 1em;
+    font-size: 1.1em;
 }
-/*--//paragraph--*/
-.w3-agileits-testimonial{
-    background: url(../images/dott.png)repeat 0 0;
-    background-size: 2px;
-    -webkit-background-size: 2px;
-    -moz-background-size: 2px;
-    -o-background-size: 2px;
-    -ms-background-size: 2px;
+#align-the-paragraph b {
+    color: black;
 }
+
+div h3 {
+    font-size: 1.8em;
+    color: #9b9b9b;
+    font-family: 'Franklin Gothic Demi', cursive;
+    margin: 0;
+}
+/*--// paragraph --*/
+/*-- suggestion --*/
 .wthree-subscribe h3,.contact h3{
-    font-size: 3em;
+    font-size: 1.2em;
     color: #A52DC2;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Franklin Gothic Demi', cursive;
     margin: 0;
 }
 .wthree-subscribe h3,.contact h3{
     text-align:center;
 }
-.welcome,.w3-agileits-testimonial,.contact{
+.welcome,.testimonial,.contact{
     padding:5em 0;
 }
-/*-- subscribe --*/
 .subscribe-bg {
     padding: 2em 0!important;
 }
 .wthree-subscribe {
-    background: url(../images/img1.jpg) no-repeat 0 0;
+    background: url(../images/spacy_img.png) no-repeat 0 0;
     background-size:cover;
 }
 .wthree-subscribe h3{
     text-align: left;
     padding-left: 150px;
-    font-size: 2em;
-    color: #c5c5c5;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Demi', cursive;
     margin: 0;
 }
-.w3-agileits-subscribe-form {
+.subscribe-form {
     text-align: left;
     margin: 2em 0 0 0;
     padding-left: 150px;
 }
-.w3-agileits-subscribe-form input[type="text"] {
+.subscribe-form input[type="text"] {
     display: inline-block;
     background: #FFFFFF;
     border: solid 2px #FFFFFF;
@@ -175,7 +258,7 @@ li a:hover svg g path {
     font-size: .875em;
     color: #999999;
 }
-.w3-agileits-subscribe-form textarea {
+.subscribe-form textarea {
     display: inline-block;
     background: #FFFFFF;
     border: solid 2px #FFFFFF;
@@ -188,7 +271,7 @@ li a:hover svg g path {
 
  label {
     font-size: 1em;
-    color: #b6b6b6;
+     color: #ffffff;
     text-align: left;
 }
 
@@ -205,6 +288,26 @@ button.btn1:hover{
     background:none;
     border: solid 2px #FFFFFF;
 }
+/*-- //suggestion --*/
+/*-- join-us --*/
+.form{
+    border-radius: 5px;
+    background-color: rgb(107, 101, 107);
+    border: 2px solid black;
+    padding: 25px 50px 75px 100px;
+    text-align:left;
+}
 
-
-/*-- //subscribe --*/
+.form form label{
+    color: black !important;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/*// join-us */

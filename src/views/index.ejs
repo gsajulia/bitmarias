@@ -8,68 +8,149 @@
 <body>
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- banner -->
-<div class="banner">
-    <div class="banner-dot">
+<div class="banner"  align="center">
+    <div class="banner-dot" >
         <% include partials/nav.ejs %>
         <!-- banner-info -->
         <div class="banner-info">
+
             <div class="container">
                 <div class="text-display">
-                    <h2>Seja bem-vinda/o!</h2>
-                    <h3>BitMarias</h3>
+                    <h2 style="visibility: hidden">Bem-vinda/o!</h2>
                 </div>
             </div>
         </div>
         <!-- //banner-info -->
     </div>
 </div>
+<div class="invisivel">Oi, eu sou a Maria!</div>
+<!-- Trigger/Open The Modal -->
+<input type="image" id="myBtn" style="height:185px;width:150px;" src="images/mariaRobot.png"  alt=" " class="fixo"/>
+<!--<button id="myBtn" class="fixo"><img src="images/mariaRobot.png" alt=" " width="50" height="50"></button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div style="padding: 0 150px; width: 150px; height: 350px;">
+        <iframe
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/8ef3fdd6-7b66-4638-a409-045639ed1ef2">
+        </iframe>
+        <span class="close">&times;</span>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 443) {
+            jQuery(".fb-page").addClass("fixo");
+        } else {
+            jQuery(".fb-page").removeClass("fixo");
+        }
+    });
+</script>
+<script>
+    // Get the modal
+    let modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    let btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+    $('.invisivel').show(0).delay(2000).hide(0);
+
+    $('.visivel').on('mouseout', function() {
+        $('.invisivel').hide();
+    });
+</script>
 <!-- //banner -->
 <!-- about -->
 <div id="about">
-    <img src="images/bitmariassm.jpg" alt=" " />
+    <img src="images/bitmariassm.jpg" alt=" " style="padding: 0 0 0 0;" />
+    <div>
+    </div>
     <div id="align-the-paragraph">
+        <br/><br/>
         <h3>Sobre nós</h3>
-        <p>
+        <p style="padding: 0 50px; border: 2px solid black;">
+            <br/>
             O BitMarias é um grupo de mulheres em cursos relacionados à computação na UFSM.
             Ele surgiu em julho de 2019 e conta com colaboração de alunas e professoras de
             diferentes centros da Universidade!
-        </p>
-        <p>
-        O BitMarias busca ser um grupo para unir, motivar, ajudar e incentivar mulheres na computação. <br/>
-            Nossos principais objetivos são: <br/>
+            <br/><br/>
+        <img src="images/adaa.png" alt="Logo" style="height: 500px; float: left; color: white;" />
 
-        Promover diálogos para compreender mais sobre o interesse de mulheres na área e sobre a evasão daquelas que entram, para poder criar soluções práticas para o incentivo à presença feminina nos cursos de computação; <br/>
-        Dar visibilidade a participação feminina em projetos de computação na UFSM;<br/>
-        Ser um contato direto com as meninas dos cursos de computação para promover eventos e oportunidades;<br/>
-        Incentivar a criação de projetos técnicos e de pesquisa dentro do grupo;<br/>
-        Orientar novas ingressantes nos cursos;<br/>
-        Apoiar e orientar sobre procedimentos que devem ser feitos em casos de assédio;<br/>
-        Criar novas amizades!<br/>
+
+            <b>Principais objetivos: </b><br/>
+
+            <b>→</b> Promover diálogos para compreender mais sobre o interesse de mulheres na área e sobre a evasão daquelas que entram, para poder criar soluções práticas para o incentivo à presença feminina nos cursos de computação; <br/>
+            <b>→</b> Dar visibilidade a participação feminina em projetos de computação na UFSM;<br/>
+            <b>→</b> Ser um contato direto com as meninas dos cursos de computação para promover eventos e oportunidades;<br/>
+            <b>→</b> Incentivar a criação de projetos técnicos e de pesquisa dentro do grupo;<br/>
+            <b>→</b> Orientar novas ingressantes nos cursos;<br/>
+            <b>→</b> Apoiar e orientar sobre procedimentos que devem ser feitos em casos de assédio;<br/>
+            <b>❤ Criar novas amizades!</b><br/>
+            <a href="https://www.facebook.com/bitmarias/"><img src="images/fb.png" alt=" " style="width: 50px; height: 50px;"></a><br/>
+            <br/>
         </p>
+
     </div>
     <div class="clearfix"> </div>
 </div>
 <!-- //about -->
 <!-- subscribe -->
 <div class="wthree-subscribe" id="contact">
-    <div class="w3-agileits-testimonial subscribe-bg">
+<!--    <img src="images/Ada_Lovelace.svg" alt="Logo" style="height: 500px; position:absolute; float: right;" />-->
+    <div class="testimonial subscribe-bg">
         <div class="container">
             <h3>Entre em contato conosco</h3>
             <form  method="POST" action="/">
-                <div class="w3-agileits-subscribe-form">
+                <div class="subscribe-form">
                     <label for="msg">Informe seu email:</label><br/><br/>
                     <label>
-                        <input class="col-md-12" type="text" placeholder="email" name="email" required="" value="<%= qs.person%>">
+                        <input class="col-md-12" type="text" placeholder="Informe seu email" name="email" required="" value="<%= qs.person%>">
                     </label><br/><br/>
-                    <label for="msg">Você pode nos mandar dúvidas ou sugestões abaixo:</label><br/><br/>
+                    <label for="msg">Mensagem:</label><br/><br/>
                     <textarea id="msg" cols="5" rows="5" name="msg" value="<%= qs.msg%>"></textarea><br/><br/>
-                    <button class="btn1">Subscribe</button>
+                    <button class="btn1">Enviar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<hr style="height:70px; border:none; background-color:#0a0a0a; margin-top: 0; margin-bottom: 0;" />
+<div style="padding: 50px 150px;">
+    <div style="background-color: #0b1f3a; padding: 50px 50px; border: 2px solid black;">
+    <h3>Instagram <svg viewBox="0 0 311.1 14.4" style="fill: none; stroke: #9b9b9b; stroke-width: 2; width: 630px; float: right;">
+                <polyline points="0.7,13.7 13.4,0.8 25.3,12.8 37.2,0.8 49,12.8 60.9,0.8 72.8,12.8 84.7,0.8 96.6,12.8 108.4,0.8
+	120.3,12.8 132.2,0.8 144,12.8 155.9,0.8 167.7,12.8 179.8,0.7 191.7,12.8 203.6,0.8 215.4,12.8 227.3,0.8 239.2,12.8 251.1,0.8
+	262.9,12.8 274.8,0.8 286.7,12.8 298.6,0.8 310.4,12.8 "></polyline>
+            </svg></h3>
+    <br/><br/>
+    <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'8QviL6yEb087eTnKZjEw'});Pixlee.addSimpleWidget({widgetId:'22834'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+    </div>
+    </div>
+<div style="background-color:#0a0a0a; color: #ffffff; text-align: left; font-size: 0.7em; padding: 50px 0 50px 50px; font-family: 'Franklin Gothic Demi', cursive;"> Site: Júlia Gabriela Santi Acosta <br/> Infra: Carla Barden</div>
+<!--<hr style="height:70px; border:none; background-color:#0a0a0a; margin-top: 0; margin-bottom: 0;" />-->
 <!-- //subscribe -->
 </body>
 </html>

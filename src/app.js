@@ -12,6 +12,9 @@ app.use('/images', express.static('images'));
 app.get('/',  function (req, res) {
     res.render('index', {qs: req.query}) ;
 });
+app.get('/contact',  function (req, res) {
+    res.render('join-us', {qs: req.query}) ;
+});
 app.post('/', urlencodedParser, function (req, res) {
     console.log(req.body);
     const {email, msg} = req.body;
@@ -26,7 +29,7 @@ app.post('/', urlencodedParser, function (req, res) {
     });
 
     //email pro bitmarias
-    sendMail(email, msg, 'beijosdajulia@gmail.com',function (error, data) {
+    sendMail(email, msg, 'bitmarias@inf.ufsm.br',function (error, data) {
         if(error){
             res.status(500).json({message: 'Internal Error'});
         } else {
